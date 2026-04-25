@@ -177,15 +177,6 @@ story_app/
 - **Splash Screen Color:** `#009688` (Teal)
 - **Android 12+:** Adaptive icon from `assets/images/app_icon.png` with teal background, full-screen mode enabled
 
----
-
-## 📱 Screenshots
-
-> *(Add your screenshots here)*
-
-| Splash Screen | Home / Stories List | Create Story | Story Detail |
-|---|---|---|---|
-| *coming soon* | *coming soon* | *coming soon* | *coming soon* |
 
 ---
 
