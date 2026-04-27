@@ -50,7 +50,7 @@ class _HomeViewState extends State<HomeView> {
               CustomAppBar(title: 'Your Stories'),
               Expanded(
                 child: stories.isEmpty
-                    ? const EmptyState()
+                    ? const EmptyState("No stories yet!")
                     : StoryListView(stories: stories),
               ),
               CustomButton(

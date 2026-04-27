@@ -42,6 +42,9 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
   image_picker: ^1.2.1
+  lottie: ^3.3.3
+  flutter_native_splash: ^2.4.7
+
 
 dev_dependencies:
   flutter_test:
@@ -54,10 +57,10 @@ flutter_icons:
     ios: true
     image_path: "assets/images/AppIcon.jpg"
 flutter_native_splash:
-  color: "#009688" # Your teal color
-  image: assets/images/AppIcon.jpg
+  color: "#009688"
+  #image: assets/images/AppIcon.jpg
   android_12:
-    image: assets/images/app_icon.png
+    #image: assets/images/app_icon.png
     color: "#009688"
   fullscreen: true
 

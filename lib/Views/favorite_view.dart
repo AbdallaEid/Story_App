@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:story_app/Widgets/empty_state.dart';
 import 'package:story_app/Widgets/story_list_view.dart';
 import 'package:story_app/cubits/story_cubit/story_cubit.dart';
 import 'package:story_app/models/story_model.dart';
@@ -40,7 +41,11 @@ class _FavoriteViewState extends State<FavoriteView> {
           body: Column(
             children: [
               CustomAppBar(title: 'favorite', isBack: true),
-              StoryListView(stories: stories),
+              Expanded(
+                child: stories.isEmpty
+                    ? const EmptyState("No favorite stories yet!")
+                    : StoryListView(stories: stories),
+              ),
             ],
           ),
         );

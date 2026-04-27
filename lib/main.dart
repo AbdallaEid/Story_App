@@ -1,14 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
 import 'package:hive_flutter/hive_flutter.dart';
+import 'package:story_app/Views/animated_view.dart';
 import 'package:story_app/Views/home_view.dart';
 import 'package:story_app/constants.dart';
 import 'package:story_app/models/story_model.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:story_app/simple_bloc_observer.dart';
 import 'cubits/story_cubit/story_cubit.dart';
+import 'package:flutter_native_splash/flutter_native_splash.dart';
+import 'package:lottie/lottie.dart';
 
 void main() async {
+  //WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
+  //FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
   await Hive.initFlutter(); //Finds the right path: On mobile devices
   Bloc.observer = SimpleBlocObserver();
   Hive.registerAdapter(StoryModelAdapter());
@@ -27,8 +32,8 @@ class MyApp extends StatelessWidget {
       providers: [BlocProvider(create: (context) => StoryCubit())],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        title: 'Flutter Demo',
-        home: const HomeView(),
+        title: 'StoryKid',
+        home: AnimatedSplashScreen(),
       ),
     );
   }

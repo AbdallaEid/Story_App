@@ -161,7 +161,7 @@ class _EditStoryScreenState extends State<EditStoryScreen> {
     } else {
       return Padding(
         padding: const EdgeInsets.all(100.0),
-        child: Image.asset('assets/images/test.jpg', fit: BoxFit.contain),
+        child: Image.asset('assets/images/noimage.jpg', fit: BoxFit.contain),
       );
     }
   }
